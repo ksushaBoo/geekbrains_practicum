@@ -35,16 +35,16 @@ public class MailTest {
     @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"ru.mail.mailapp:id/text\" and @text=\"News\"]")
     MobileElement newsFolderBtn;
 
-    @AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Go back\"]")
+    @AndroidFindBy(className = "android.widget.ImageButton")
     MobileElement backBtn;
 
     @AndroidFindBy(id = "ru.mail.mailapp:id/fab")
     MobileElement createBtn;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"ru.mail.mailapp:id/action_name\" and @text=\"Compose email\"]")
+    @AndroidFindBy(id = "ru.mail.mailapp:id/new_actions_create_email")
     MobileElement composeEmailBtn;
 
-    @AndroidFindBy(xpath = "(//android.widget.AutoCompleteTextView[@resource-id=\"ru.mail.mailapp:id/edit\"])[1]")
+    @AndroidFindBy(uiAutomator = "resourceIdMatches(\"ru.mail.mailapp:id/to\").childSelector(resourceIdMatches(\"ru.mail.mailapp:id/edit\"))")
     MobileElement toInpt;
 
     @AndroidFindBy(id = "ru.mail.mailapp:id/subject")
